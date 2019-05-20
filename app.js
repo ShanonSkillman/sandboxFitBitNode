@@ -20,26 +20,27 @@
 
 var FitbitApiClient = require("fitbit-node");
 
-const client = new FitbitApiClient({ clientId: "22DPLG", clientSecret: "9abbcfe2328e76b77051967a2c8aa23c", apiVersion: "1.2" })
+const client = new FitbitApiClient({ clientId: "22DPLG", clientSecret: "9abbcfe2328e76b77051967a2c8aa23c", apiVersion: "1.2" });
 
 // console.log("client", client)
 
-// const url =
-//     client.getAuthorizeUrl('activity heartrate location nutrition profile settings sleep social weight', 'https://www.google.com', ["none"], ["FANTASTIC"])
+const url = client.getAuthorizeUrl('activity heartrate location nutrition profile settings sleep social weight', 'https://www.google.com', ["none"], ["FANTASTIC"]);
 
 // console.log("url", url)
 
-const code = 'cbdfc17722bd31cdf0580326eab6af2bc9e29704'
+const code = '3ce845bbc56ca9a02195fb09bc008c9c191477a8';
 
-// const getToken = client.getAccessToken(code, "https://www.google.com")
+// const getToken = client.getAccessToken(code, 'https://www.google.com')
 //     .then(token => {
-//         console.log('token', token)
+//         console.log("token", token)
 //     })
 //     .catch(e => {
 //         console.log(e)
 //     })
 
-const token = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkRQTEciLCJzdWIiOiI0Uk40TVkiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTU4NDE4NTA3LCJpYXQiOjE1NTgzODk3MDd9.4T9Lt5cIFiU9M8wPDwPa2HtRED20rzMXhODG1BUc5eY'
+const token = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkRQTEciLCJzdWIiOiI0Uk40TVkiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJudXQgcnBybyByc2xlIiwiZXhwIjoxNTU4NDIwMjY3LCJpYXQiOjE1NTgzOTE0Njd9.Lgwg2RJzdc36u_yMqicFKmgkPWp316wVcffGT02h-L8'
+
+const userId = '4RN4MY'
 
 client.get('/profile.json', token)
     .then(results => {
