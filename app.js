@@ -11,7 +11,12 @@
 
 //Bearer Tokens
 //cryptography-free authentication option, based on existing cookie authentication architecture, instead of sending signed requests and token sercrets - the token itself is used as a secret sent over HTTPS
-///
+
+//RESOURCES//
+//https://www.npmjs.com/package/fitbit-node
+//https://github.com/ShanonSkillman/sandboxFitBitNode
+///https://hueniverse.com/introducing-oauth-2-0-b5681da60ce2
+//https://dev.fitbit.com/apps/oauthinteractivetutorial?clientEncodedId=22DPLG&clientSecret=9abbcfe2328e76b77051967a2c8aa23c&redirectUri=https://www.google.com&applicationType=SERVER
 
 var FitbitApiClient = require("fitbit-node");
 
